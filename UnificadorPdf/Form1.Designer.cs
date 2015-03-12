@@ -38,8 +38,7 @@
             // 
             // fileDialog
             // 
-            this.fileDialog.FileName = "openFileDialog1";
-            this.fileDialog.InitialDirectory = "c:\\users\\antonio\\Vídeos";
+            this.fileDialog.DefaultExt = "pdf";
             this.fileDialog.Multiselect = true;
             this.fileDialog.RestoreDirectory = true;
             // 
@@ -73,6 +72,7 @@
             // 
             // btnGerar
             // 
+            this.btnGerar.Enabled = false;
             this.btnGerar.Location = new System.Drawing.Point(150, 157);
             this.btnGerar.Name = "btnGerar";
             this.btnGerar.Size = new System.Drawing.Size(242, 24);
@@ -80,6 +80,12 @@
             this.btnGerar.Text = "Gerar Arquivo Unificado";
             this.btnGerar.UseVisualStyleBackColor = true;
             this.btnGerar.Click += new System.EventHandler(this.btnGerar_Click);
+            // 
+            // saveFile
+            // 
+            this.saveFile.DefaultExt = "pdf";
+            this.saveFile.FileName = "PdfUnificado";
+            this.saveFile.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFile_FileOk);
             // 
             // formPrincipal
             // 
