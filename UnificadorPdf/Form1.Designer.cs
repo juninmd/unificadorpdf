@@ -28,51 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.fileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.lstLista = new System.Windows.Forms.ListView();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnGerar = new System.Windows.Forms.Button();
+            this.saveFile = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
-            // openFileDialog1
+            // fileDialog
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.fileDialog.FileName = "openFileDialog1";
+            this.fileDialog.InitialDirectory = "c:\\users\\antonio\\Vídeos";
+            this.fileDialog.Multiselect = true;
+            this.fileDialog.RestoreDirectory = true;
             // 
-            // listView1
+            // lstLista
             // 
-            this.listView1.Location = new System.Drawing.Point(49, 49);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(451, 102);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lstLista.Location = new System.Drawing.Point(49, 49);
+            this.lstLista.Name = "lstLista";
+            this.lstLista.Size = new System.Drawing.Size(451, 102);
+            this.lstLista.TabIndex = 0;
+            this.lstLista.UseCompatibleStateImageBehavior = false;
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.Location = new System.Drawing.Point(49, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(242, 24);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Adicionar Pdfs na Lista";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdd.Location = new System.Drawing.Point(49, 19);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(242, 24);
+            this.btnAdd.TabIndex = 1;
+            this.btnAdd.Text = "Adicionar Pdfs na Lista";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // button2
+            // btnLimpar
             // 
-            this.button2.Location = new System.Drawing.Point(297, 19);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(203, 24);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Limpar Lista";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnLimpar.Location = new System.Drawing.Point(297, 19);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(203, 24);
+            this.btnLimpar.TabIndex = 2;
+            this.btnLimpar.Text = "Limpar Lista";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
-            // button3
+            // btnGerar
             // 
-            this.button3.Location = new System.Drawing.Point(150, 157);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(242, 24);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Gerar Arquivo Unificado";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnGerar.Location = new System.Drawing.Point(150, 157);
+            this.btnGerar.Name = "btnGerar";
+            this.btnGerar.Size = new System.Drawing.Size(242, 24);
+            this.btnGerar.TabIndex = 3;
+            this.btnGerar.Text = "Gerar Arquivo Unificado";
+            this.btnGerar.UseVisualStyleBackColor = true;
+            this.btnGerar.Click += new System.EventHandler(this.btnGerar_Click);
             // 
             // formPrincipal
             // 
@@ -80,27 +87,28 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(539, 194);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.btnGerar);
+            this.Controls.Add(this.btnLimpar);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.lstLista);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "formPrincipal";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Unificador de Pdfs por Antonio Carlos";
+            this.Text = "Unificador de Pdfs";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.OpenFileDialog fileDialog;
+        private System.Windows.Forms.ListView lstLista;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnGerar;
+        private System.Windows.Forms.SaveFileDialog saveFile;
     }
 }
 
